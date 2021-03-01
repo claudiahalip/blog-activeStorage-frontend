@@ -28,37 +28,45 @@ class PostForm extends Component {
 
     handleSubmit = (e)=>{
         e.preventDefault()
-        
         console.log("merge????")
-
-        console.log(this.state)
-
         let post = {
             title: this.state.title,
             content: this.state.content
-        }
+        };
 
-        fetch("http://localhost:3001/posts",{
+        fetch('http://localhost:3001/posts', {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
             }, 
             body: JSON.stringify(post)
         })
         .then(response => response.json())
-        .then(response=> this.uploadFile(this.state.featured_image, response))
+        .then(resp => this.uploadFile(this.state.featured_image, resp))
+        
 
     }
 
-    uploadFile = (file, post)=>{
-       const upload = new DirectUpload(file, "http://localhost:3001/rails/active_storage/direct_uploads")
+    uploadFile = (file, post) => {
+       const upload = new DirectUpload(file, 'http://localhost:3001/rails/active_storage/direct_uploads')
        upload.create((error, blob) => {
            if(error){
                console.log(error)
            }else{
-               console.log("there is no error")
+               fetch(`http://localhost:3001/posts/${post.id}`, {
+                   method: 'PUT',
+                   headers: {
+                       'Content-Type': 'application/json',
+                       'Accept': 'application/json'
+                   },
+                   body: JSON.stringify({featured_image: blob.signed_id})
+               })
+               .then(resp => resp.json())
+            //    .then(data => console.log(data))
+               .then(data => this.props.displayPost(data))
            }
+           
        })
     }
 
