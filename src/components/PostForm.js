@@ -44,9 +44,7 @@ class PostForm extends Component {
         })
         .then(response => response.json())
         .then(resp => this.uploadFile(this.state.featured_image, resp))
-        
-
-    }
+        }
 
     uploadFile = (file, post) => {
        const upload = new DirectUpload(file, 'http://localhost:3001/rails/active_storage/direct_uploads')
@@ -64,10 +62,19 @@ class PostForm extends Component {
                })
                .then(resp => resp.json())
             //    .then(data => console.log(data))
-               .then(data => this.props.displayPost(data))
+            //    .then(data => this.displayPost(data))
+            // to define displayPost method 
            }
            
        })
+    }
+
+    displayPost = (data) =>{
+        return console.log(data)
+    //    return(
+    //        <div>{data}</div>
+    //    )
+       
     }
 
 
@@ -102,6 +109,7 @@ class PostForm extends Component {
                     <input type = "submit" className="submit" ></input>
                 </form>
                 </div>
+                {this.displayPost()}
             </div>
         )
     }
