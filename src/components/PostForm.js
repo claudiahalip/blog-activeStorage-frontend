@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/PostForm.css';
 import { DirectUpload } from 'activestorage';
+import { withRouter } from 'react-router-dom';
 
 class PostForm extends Component {
     constructor(){
@@ -44,7 +45,8 @@ class PostForm extends Component {
         })
         .then(response => response.json())
         .then(resp => this.uploadFile(this.state.featured_image, resp))
-        }
+        this.props.history.push('/posts')
+    }
 
     uploadFile = (file, post) => {
        const upload = new DirectUpload(file, 'http://localhost:3001/rails/active_storage/direct_uploads')
@@ -61,9 +63,9 @@ class PostForm extends Component {
                    body: JSON.stringify({featured_image: blob.signed_id})
                })
                .then(resp => resp.json())
-            //    .then(data => console.log(data))
-            //    .then(data => this.displayPost(data))
-            // to define displayPost method 
+               
+               
+        
            }
            
        })
@@ -115,4 +117,4 @@ class PostForm extends Component {
     }
 }
 
-export default PostForm
+export default withRouter(PostForm)

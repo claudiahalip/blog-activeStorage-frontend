@@ -7,7 +7,7 @@ import {Route} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <Route exact path ='/new'>
+      <Route exact path ='/posts/new'>
       <PostForm/>
       </Route>
       

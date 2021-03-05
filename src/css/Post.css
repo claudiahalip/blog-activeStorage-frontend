@@ -5,7 +5,7 @@
     overflow: hidden;
     box-shadow: 0px 6px 18px -9px  grey;
     transition: transform 100ms ease-in;
-    cursor: pointer;
+    
 }
 
 .blog-post:hover{
@@ -15,7 +15,7 @@
 .blog-post > img {
     object-fit: fill;
     min-width: 200px;
-    min-height: 300px;
+    min-height: 100px;
     
 }
 .post-info{
@@ -23,13 +23,14 @@
    padding: 20px;
    padding-top: 20px;
    border: 1;
+   height: 200px;
 }
 
 .post-info > h1 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     font-family: fantasy;
-    margin: 20px;
+    margin: 15px;
 
 }
 
@@ -38,6 +39,6 @@
     font-weight: 300;
     font-family: monospace;
     margin: 20px;
-    margin-right: 600px;
+   
     
 }
