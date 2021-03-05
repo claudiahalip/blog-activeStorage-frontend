@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
+import '../css/Post.css'
 // debugger
 
 export default class Post extends Component {
     render() {
         return (
-            <div>
-                <p>test POST component</p>
-                <img src = {this.props.image}></img>  
-                <p>{this.props.title}</p>
+            <div className="blog-post">
+                <img src = {this.props.image}></img> 
+                <div className="post-info">
+                <h1>{this.props.title}</h1>
                 <p>{this.props.content}</p>
-                               
+                </div> 
             </div>
         )
     }

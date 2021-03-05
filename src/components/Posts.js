@@ -47,8 +47,6 @@ export default class Posts extends Component {
     render() {
         return (
             <div>
-                <p>test  POSTS component</p>
-                <Post   test={"test"}/>
                 {this.renderPosts()}
             </div>
         )

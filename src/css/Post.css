@@ -1,0 +1,43 @@
+.blog-post {
+    display: flex;
+    margin: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px  grey;
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+}
+
+.blog-post:hover{
+    transition: scale(1.07);
+}
+
+.blog-post > img {
+    object-fit: fill;
+    min-width: 200px;
+    min-height: 300px;
+    
+}
+.post-info{
+   margin-top: -9px; 
+   padding: 20px;
+   padding-top: 20px;
+   border: 1;
+}
+
+.post-info > h1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: fantasy;
+    margin: 20px;
+
+}
+
+.post-info > p {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: monospace;
+    margin: 20px;
+    margin-right: 600px;
+    
+}
