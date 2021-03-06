@@ -11,7 +11,8 @@ export default class Posts extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount = () => {
+    
         fetch('http://localhost:3001/posts')
         .then(resp => resp.json())
         .then(data => {
@@ -22,25 +23,17 @@ export default class Posts extends Component {
 
     getData = (data)=>{
       this.setState({
-          posts: data
+        posts: data
       })
     }
 
     renderPosts = () =>{
-
         return this.state.posts.map( post => { 
             console.log(post)
             return <Post  title = {post.title} 
             content={post.content} 
             image = {post.image ? post.image : default_image   }
-            // image = {default_image}
             key = {post.id}/>
-
-            // <div>
-            // <div>{p.title}</div>
-            // <div>{p.content}</div>
-            // <div>{p.featured_image_attachment.filename}</div>
-            // </div>
         })
     }
 
