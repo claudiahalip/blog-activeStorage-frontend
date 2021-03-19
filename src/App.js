@@ -4,6 +4,7 @@ import Posts from './components/Posts'
 import Home from './components/Home'
 import PostForm from './components/PostForm'
 import {Route} from 'react-router-dom'
+import PostsF from './components/PostsF'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       
       <Route exact path ='/posts'>
       <Posts/>
+      </Route>
+      <Route exact path = '/postsF'>
+        <PostsF/>
       </Route>
      
     </div>

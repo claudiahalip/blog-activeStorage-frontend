@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Post from './Post'
-import default_image from '../images/default-image.jpg'
+import React, { Component } from 'react';
+import Post from './Post';
+import default_image from '../images/default-image.jpg';
 
 export default class Posts extends Component {
 

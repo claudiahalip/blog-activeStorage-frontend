@@ -1,0 +1,15 @@
+.home-page{
+display: block;
+  align-items: center; 
+}
+h1{
+    font-family: avenir;
+    color: cornflowerblue;
+    font-size: 24px;
+}
+
+.img-home{
+    width: 1400px;
+    
+}
+
