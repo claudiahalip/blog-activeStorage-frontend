@@ -40,6 +40,7 @@ export default class Posts extends Component {
     render() {
         return (
             <div>
+                <h1 className="postsTitle">Do you know?</h1>
                 {this.renderPosts()}
             </div>
         )

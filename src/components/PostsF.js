@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import PostF from '../components/PostF';
 import default_image from '../images/default-image.jpg';
+import '../css/Posts.css';
 
 export default function PostsF() {
     const [error, setError] = useState(null);
