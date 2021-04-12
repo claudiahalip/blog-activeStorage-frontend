@@ -47,7 +47,7 @@ class PostForm extends Component {
         .then(response => response.json())
         .then(resp => this.uploadFile(this.state.featured_image, resp))
 
-        this.props.history.push('/')
+        this.props.history.push('/postsF')
     }
 
 

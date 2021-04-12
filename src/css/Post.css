@@ -5,6 +5,7 @@
     overflow: hidden;
     box-shadow: 0px 6px 18px -9px  grey;
     transition: transform 100ms ease-in;
+    height: 200px;
     
 }
 
@@ -14,10 +15,8 @@
 
 .blog-post > img {
     object-fit: fill;
-    min-width: 200px;
-    min-height: 100px;
-    
 }
+
 .post-info{
    margin-top: -9px; 
    padding: 20px;
