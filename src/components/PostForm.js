@@ -30,7 +30,7 @@ class PostForm extends Component {
 
     handleSubmit = (e)=>{
         e.preventDefault()
-        console.log("merge????")
+        
         let post = {
             title: this.state.title,
             content: this.state.content
@@ -47,7 +47,7 @@ class PostForm extends Component {
         .then(response => response.json())
         .then(resp => this.uploadFile(this.state.featured_image, resp))
 
-        this.props.history.push('/postsF')
+        this.props.history.push('/posts')
     }
 
 
@@ -78,7 +78,7 @@ class PostForm extends Component {
     render() {
         return (
             <div className="postForm">
-                <p>Create your blog post:</p>
+                <p>Create your post:</p>
                 <div className="form">
                 <form onSubmit = {this.handleSubmit}>
                     <label>Title:</label>
@@ -93,6 +93,7 @@ class PostForm extends Component {
                     <input 
                     className="select"
                     type="textarea"
+                    style={{height: "200px"}}
                     name="content"
                     value={this.state.content}
                     onChange={this.handleChange}
