@@ -1,11 +1,13 @@
 .home-page{
 display: block;
   align-items: center; 
+  
 }
 h1{
     font-family: avenir;
     color: grey;
     font-size: 24px;
+    margin-left: 20px;
 }
 
 .img-home{

@@ -5,20 +5,20 @@
 p {
   font-size: 18px;
   font-family: monospace;
-  color: #8d4f6c;
+  color: navy;
 }
 
 label{
     font-size: 14px;
     font-family: monospace;
-    color:  #e684b1;
+    color: navy;
 }
 .form {
     margin: auto;
     height: 430px;
     width: 300px;
     border-radius: 5px;
-    background-color:#af4c7a71;
+    background-color: rgb(198, 198, 199);
     padding: 30px;
 }
 
@@ -38,7 +38,7 @@ label{
 
 .chooseFile {
   width: 85%;
-  background-color: #e684b1;
+  background-color: navy;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -59,12 +59,12 @@ label{
 }
 
 .chooseFile:hover{
-  color: #79435c;
+  color: rgb(66, 66, 224);
 }
 
 .submit {
   width: 100%;
-  background-color: #af4c7a;
+  background-color: navy;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -76,6 +76,6 @@ label{
 }
 
 .submit:hover {
-  background-color:#8d4f6c;
+  background-color: rgb(1, 1, 53);
 }
 

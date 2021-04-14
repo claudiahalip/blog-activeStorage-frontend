@@ -5,10 +5,11 @@ import Home from './components/Home'
 import PostForm from './components/PostForm'
 import {Route} from 'react-router-dom'
 import PostsF from './components/PostsF'
-
+import NavBar from './components/NavBar'
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <Route exact path = "/">
         <Home/>
       </Route>
